@@ -2,6 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.18.1)
+    haml (5.1.2)
+      temple (>= 0.8.0)
+      tilt
     multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
@@ -26,15 +29,20 @@ GEM
       tilt (~> 2.0)
     sinatra-reloader (1.0)
       sinatra-contrib
+    temple (0.8.2)
     tilt (2.0.10)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  haml
   puma
   sinatra
   sinatra-reloader
+
+RUBY VERSION
+   ruby 2.6.6p146
 
 BUNDLED WITH
    2.1.4

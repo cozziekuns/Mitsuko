@@ -1,0 +1,40 @@
+%header 
+  %h1 Hitori Mahjong Simulator
+%form{ action: "", method: "post" }
+  %p
+    %label{ for: "hand" } 
+      %strong Hand
+    %br
+    %input{ type: "text", name: "hand" }
+  %p
+    %label{ for: "calls" }
+      %strong Calls
+    %br
+    %input{ type: "text", name: "calls" }
+  %p
+    %label{ for: "dora" }
+      %strong Dora
+    %br
+    %input{ type: "text", name: "dora" }
+  %p
+    %strong Yaku
+    %br
+    %input{ type: "radio", name: "yaku", value: "riichi", checked: true }
+    %label{ for: "riichi" } Riichi
+    %br
+    %input{ type: "radio", name: "yaku", value: "yakuhai"}
+    %label{ for: "yakuhai" } Yakuhai
+    %br
+    %input{ type: "radio", name: "yaku", value: "tanyao"}
+    %label{ for: "tanyao" } Tanyao
+    %br
+    %input{ type: "radio", name: "yaku", value: "chanta"}
+    %label{ for: "chanta" } Chanta
+    %br
+    %input{ type: "radio", name: "yaku", value: "honitsu"}
+    %label{ for: "honitsu" } Honitsu
+    %br
+    %input{ type: "radio", name: "yaku", value: "chinitsu"}
+    %label{ for: "chinitsu" } Chinitsu
+
+  %input{ type: "submit", value: "Submit"}
