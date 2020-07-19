@@ -120,9 +120,10 @@ module Simulator
 
     if node.shanten == end_shanten
       agari_chance = (node.outs.length * 3.0 / wall)
-      miss_chance = 1 - agari_chance
+      agari_chance += (1 - agari_chance) * self.simulate(node, draws_left - 1, end_shanten, memo)
       
-      return agari_chance + miss_chance * self.simulate(node, draws_left - 1, end_shanten, memo)
+      memo[node][draws_left] = agari_chance
+      return agari_chance
     end
 
     agari_chance = 0
@@ -133,7 +134,7 @@ module Simulator
       total_advance_chance += advance_chance
 
       best_agari_chance = 0
-      
+
       node.children[out].each { |new_node|
         new_agari_chance = self.simulate(new_node, draws_left - 1, end_shanten, memo)
         best_agari_chance = [best_agari_chance, new_agari_chance].max
