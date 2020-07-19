@@ -2,13 +2,25 @@
   %h1 Hitori Mahjong Simulator Results
 %p
   %strong Hand: 
-  ="#{@hand_string}"
-%p
+  ="#{hand}"
+  %br
   %strong Calls: 
-  ="#{@call_string}"
-%p
-  %strong Dora:
-  ="#{@dora_string}"
-%p
-  %strong Yaku:
-  ="#{@yaku_string}"
+  ="#{calls}"
+  %br
+  %strong Dora: 
+  ="#{dora}"
+  %br
+  %strong Yaku: 
+  ="#{yaku}"
+  %h3 Results
+  %table
+    %tr
+      %th Turn
+      %th Tenpai Rate
+      %th Tsumo Rate
+    - 0.upto(17) do |i|
+      %tr
+        %td="#{18 - i}"
+        %td= tenpai_rates[i]
+        %td= tsumo_rates[i]
+

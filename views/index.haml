@@ -3,24 +3,23 @@
 %form{ action: "", method: "post" }
   %p
     %label{ for: "hand" } 
-      %strong Hand
-    %br
+      %h3 Hand
     %input{ type: "text", name: "hand" }
   %p
     %label{ for: "calls" }
-      %strong Calls
-    %br
+      %h3 Calls
     %input{ type: "text", name: "calls" }
   %p
     %label{ for: "dora" }
-      %strong Dora
-    %br
+      %h3 Dora
     %input{ type: "text", name: "dora" }
   %p
-    %strong Yaku
-    %br
+    %h3 Yaku
     %input{ type: "radio", name: "yaku", value: "riichi", checked: true }
     %label{ for: "riichi" } Riichi
+    %br
+    %input{ type: "radio", name: "yaku", value: "chiitoi"}
+    %label{ for: "yakuhai" } Chiitoi
     %br
     %input{ type: "radio", name: "yaku", value: "yakuhai"}
     %label{ for: "yakuhai" } Yakuhai
